@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: sebastian
+      changes:
+        - createTable:
+            tableName: CLIENTE
+            columns:
+              - column:
+                  name: ID
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: NOMBRES
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: APELLIDOS
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: CEDULA
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: EMAIL
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: FECHA_NACIMIENTO
+                  type: DATETIME
+                  constraints:
+                    nullable: false
